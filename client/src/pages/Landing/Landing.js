@@ -2,6 +2,7 @@ import React, {Component } from "react";
 import Wrapper from "../../components/Wrapper";
 import video from "../../compressed.mp4";
 import "./Landing.css";
+import {NavLink} from "react-router-dom";
 
 class Landing extends Component {
 constructor (props) {
@@ -15,7 +16,7 @@ constructor (props) {
 render () {
     return (
       <Wrapper>
-            <h1>JEPbyJEP</h1>
+  <NavLink to="/home" className="grow" id="title">JEPbyJEP</NavLink>
 
         <video id="myVideo" loop autoPlay muted>
             <source src={this.state.videoURL} type="video/mp4" />
@@ -24,13 +25,13 @@ render () {
 <div className="navs">
 <ul className="nav justify content center" id="navs">
 <li className="nav-item">
-  <a class="nav-link"href="./contact.html">CONTACT</a>
+<NavLink to="/contact" className="nav-link">CONTACT</NavLink>
 </li>
 <li className="nav-item">
-  <a className="nav-link" href="./films.html">FILMS</a>
+  <NavLink to="/films" className="nav-link">FILMS</NavLink>
 </li>
 <li className="nav-item">
-  <a className="nav-link" href="./clothes.html">CLOTHES</a>
+<NavLink to="/clothes" className="nav-link">CLOTHES</NavLink>
 </li>
 </ul>
 

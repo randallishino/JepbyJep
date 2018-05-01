@@ -22,11 +22,9 @@ render() {
                 <div className="logo">
                     JEPbyJEP
                 </div>
-                <div className="navbar">
                     <video id="homeVideo" loop autoPlay muted>
                         <source src={this.state.videoURL} type="video/mp4" />
                     </video>
-                </div>
                 <div className="list">
                     <p>Shop</p>
                     <p>Videos</p>

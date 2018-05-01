@@ -10,9 +10,11 @@
 }
 
 #homeVideo {
-    height: 450px;
-    width: 450px;
-    margin-left: 35%;
+    position: absolute;
+    height: 850px;
+    width: 850px;
+    margin-left: 25%;
+    top: 6%;
 }
 
 .list {

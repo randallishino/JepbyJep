@@ -2,10 +2,13 @@ import React from "react";
 import {Footer} from "react-materialize";
 import {Parallax} from "react-materialize";
 import img from "../../images/img2.JPG";
+import Wrapper from "../../components/Wrapper/Wrapper"
 // import "./Home.css";
+import Login from '../../components/login/login'
 
 const Home = () => 
-
+<Wrapper>
+< Login />
 <div>
   <Parallax  imageSrc={img}/>
   <div className="section white">
@@ -29,5 +32,5 @@ className='example'
   <p className="grey-text text-lighten-4">Nick Weber, Randall Ishino, David Kim, Mckenna.</p>
 </Footer>;
 </div>
-
+</ Wrapper>
 export default Home;

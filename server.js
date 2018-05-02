@@ -46,7 +46,7 @@ app.use(passport.session());
 const Shopify = new shopifyAPI({
   shop: process.env.SHOPIFY, // MYSHOP.myshopify.com
   shopify_api_key: process.env.SHOPIFYAPI, // Your API key
-  access_token: process.env.SOPIFYPASS // Your API password
+  access_token: process.env.SHOPIFYPASS // Your API password
 });
 
 var auth_url = Shopify.buildAuthURL();

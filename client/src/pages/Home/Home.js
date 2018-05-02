@@ -5,6 +5,7 @@ import img from "../../images/img2.JPG";
 import "./Home.css";
 import video from "../../compressed.mp4";
 import Wrapper from "../../components/Wrapper";
+import Login from "../../components/login/login";
 
 
 class Home extends Component {
@@ -18,6 +19,7 @@ class Home extends Component {
 render() {
     return (
         <Wrapper>
+            <Login />
             <div classname="container">
                 <div className="logo">
                     JEPbyJEP
@@ -33,6 +35,7 @@ render() {
                     <p>Collaboration</p>
                 </div>
             </div>
+            {console.log("props: ", this.props)}
         </Wrapper>
         )
     }

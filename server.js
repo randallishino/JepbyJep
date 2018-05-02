@@ -7,6 +7,8 @@ const session = require ('express-session');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const passport = require('passport');
+const facebook = require('passport-facebook');
+const mongoose = require('mongoose');
 
 
 app.use(express.static('app/public'));

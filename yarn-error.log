@@ -14,7 +14,36 @@ Platform:
   darwin x64
 
 npm manifest: 
-  No manifest
+  {
+    "name": "testjepbyJep",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/nlweber3/testjepbyJep.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/nlweber3/testjepbyJep/issues"
+    },
+    "homepage": "https://github.com/nlweber3/testjepbyJep#readme",
+    "dependencies": {
+      "body-parser": "^1.18.2",
+      "cookie-parser": "^1.4.3",
+      "dotenv": "^5.0.1",
+      "express": "^4.16.3",
+      "express-session": "^1.15.6",
+      "morgan": "^1.9.0",
+      "passport": "^0.4.0"
+    }
+  }
 
 yarn manifest: 
   No manifest
@@ -23,10 +52,16 @@ Lockfile:
   No lockfile
 
 Trace: 
-  Error: Couldn't find a package.json file in "/Users/nickweber/testjepbyJep"
-      at new MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
-      at /usr/local/lib/node_modules/yarn/lib/cli.js:40048:15
-      at Generator.next (<anonymous>)
-      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:98:30)
-      at /usr/local/lib/node_modules/yarn/lib/cli.js:109:13
-      at <anonymous>
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c node server.js
+  Directory: /Users/nickweber/testjepbyJep
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
+      at ChildProcess.emit (events.js:180:13)
+      at maybeClose (internal/child_process.js:936:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)

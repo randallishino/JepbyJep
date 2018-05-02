@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import ReactModalLogin from 'react-modal-login';
 import {FormControl, FormGroup, ControlLabel, Button} from 'react-bootstrap';
 import {facebookConfig, googleConfig} from "./social-config";
+import './login.css';
 
 class Login extends React.Component {
  
@@ -64,7 +65,7 @@ class Login extends React.Component {
       return (
         <div>
    
-          <button
+          <button className="login_btn"
             onClick={() => this.openModal()}
           >
            Sign In

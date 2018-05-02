@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import {Footer} from "react-materialize";
-import {Parallax} from "react-materialize";
-import img from "../../images/img2.JPG";
 import "./Home.css";
 import video from "../../compressed.mp4";
 import Wrapper from "../../components/Wrapper";
 import Login from "../../components/login/login";
-
+import Footer from "../../components/Footer/Footer";
 
 class Home extends Component {
     constructor(props) {
@@ -34,6 +31,8 @@ render() {
                 </div>
             </div>
             {console.log("props: ", this.props)}
+            <Footer>
+                </Footer>
         </Wrapper>
         )
     }

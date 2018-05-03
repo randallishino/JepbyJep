@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Home.css";
 import video from "../../compressed.mp4";
 import Wrapper from "../../components/Wrapper";
-import Login from "../../components/login/login";
+import Login from "../../components/Login/Login";
 import Footer from "../../components/Footer/Footer";
 import { NavLink } from "react-router-dom";
 

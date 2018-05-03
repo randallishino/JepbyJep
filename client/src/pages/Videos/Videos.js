@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Wrapper from "../../components/Wrapper";
-import Login from "../../components/login/login";
+import Login from "../../components/Login/Login";
 import { NavLink } from "react-router-dom";
 import Footer from "../../components/Footer";
 import video from "../../compressed.mp4";
@@ -19,7 +19,6 @@ class Videos extends Component {
 render() {
     return (
         <Wrapper>
-            <Login />
             <div classname="container">
                 <div className="logo">
                     <a href='/home'>JEPbyJEP</a>

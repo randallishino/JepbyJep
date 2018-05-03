@@ -12,7 +12,7 @@ const app = express();
 // const shopifyAPI = require('shopify-node-api');
 
 
-app.use(express.static('client/src'));
+app.use(express.static('client/build'));
 //  parsing into json
 app.use(bodyParser.urlencoded({
   extended: true

@@ -1,8 +1,8 @@
 // require('dotenv').config();
-// const PORT = process.env.PORT || 3000;
-// const express = require("express");
-// const bodyParser = require('body-parser');
-// const app = express();
+const PORT = process.env.PORT || 3000;
+const express = require("express");
+const bodyParser = require('body-parser');
+const app = express();
 // const session = require ('express-session');
 // const cookieParser = require('cookie-parser');
 // const morgan = require('morgan');
@@ -12,11 +12,11 @@
 // const shopifyAPI = require('shopify-node-api');
 
 
-// app.use(express.static('app/public'));
-// //  parsing into json
-// app.use(bodyParser.urlencoded({
-//   extended: true
-// }));
+app.use(express.static('app/public'));
+//  parsing into json
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 // // log every request to the console
 // app.use(morgan('dev'));
@@ -70,6 +70,6 @@
 //     console.log(headers); // Headers returned from request
 //   });
 
-// app.listen(PORT, function() {
-//     console.log("App listening on PORT " + PORT);
-//    });
+app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+   });

@@ -1,74 +1,77 @@
-require('dotenv').config();
+// require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 const express = require("express");
 const bodyParser = require('body-parser');
 const app = express();
-const session = require ('express-session');
-const cookieParser = require('cookie-parser');
-const morgan = require('morgan');
-const passport = require('passport');
-const facebook = require('passport-facebook');
-const mongoose = require('mongoose');
-const shopifyAPI = require('shopify-node-api');
+// const session = require ('express-session');
+// const cookieParser = require('cookie-parser');
+// const morgan = require('morgan');
+// const passport = require('passport');
+// const facebook = require('passport-facebook');
+// const mongoose = require('mongoose');
+// const shopifyAPI = require('shopify-node-api');
 
 
-app.use(express.static('app/public'));
+app.use(express.static('client/src'));
 //  parsing into json
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-// log every request to the console
-app.use(morgan('dev'));
+app.get('/',function(req,res) {
+    res.send('/');
+});
+// // log every request to the console
+// app.use(morgan('dev'));
 
-// read cookies (needed for auth)
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+// // read cookies (needed for auth)
+// app.use(cookieParser());
+// app.use(bodyParser.urlencoded({
+//   extended: true
+// }));
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
-// required for passport
-app.use(session({
-    secret: 'session active',
-    resave: true,
-    saveUninitialized: true
-  }));
+// // required for passport
+// app.use(session({
+//     secret: 'session active',
+//     resave: true,
+//     saveUninitialized: true
+//   }));
 
-  // session secret
-app.use(passport.initialize());
+//   // session secret
+// app.use(passport.initialize());
 
-// persistent login sessions
-app.use(passport.session());
+// // persistent login sessions
+// app.use(passport.session());
  
-//connection to shopify api  
-const Shopify = new shopifyAPI({
-  shop: process.env.SHOPIFY, // MYSHOP.myshopify.com
-  shopify_api_key: process.env.SHOPIFYAPI, // Your API key
-  access_token: process.env.SHOPIFYPASS // Your API password
-});
+// //connection to shopify api  
+// const Shopify = new shopifyAPI({
+//   shop: process.env.SHOPIFY, // MYSHOP.myshopify.com
+//   shopify_api_key: process.env.SHOPIFYAPI, // Your API key
+//   access_token: process.env.SHOPIFYPASS // Your API password
+// });
 
-var auth_url = Shopify.buildAuthURL();
+// var auth_url = Shopify.buildAuthURL();
 
-app.get('/finish_auth', function(req, res){
-    var Shopify = new shopifyAPI(config),
-    query_params = req.query;
+// app.get('/finish_auth', function(req, res){
+//     var Shopify = new shopifyAPI(config),
+//     query_params = req.query;
 
-Shopify.exchange_temporary_token(query_params, function(err, data){
-    console.log(data);
-});
-});
+// Shopify.exchange_temporary_token(query_params, function(err, data){
+//     console.log(data);
+// });
+// });
 
-//keeps us aware of api limit being reached or exceeded
-function callback(err, data, headers) {
-    var api_limit = headers['http_x_shopify_shop_api_call_limit'];
-    console.log( api_limit ); // "1/40"
-  }
-Shopify.get('/admin/products.json', function(err, data, headers){
-    console.log(data); // Data contains product json information
-    console.log(headers); // Headers returned from request
-  });
+// //keeps us aware of api limit being reached or exceeded
+// function callback(err, data, headers) {
+//     var api_limit = headers['http_x_shopify_shop_api_call_limit'];
+//     console.log( api_limit ); // "1/40"
+//   }
+// Shopify.get('/admin/products.json', function(err, data, headers){
+//     console.log(data); // Data contains product json information
+//     console.log(headers); // Headers returned from request
+//   });
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);

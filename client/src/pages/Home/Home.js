@@ -27,8 +27,8 @@ render() {
                     </video>
                 <div className="list">
                     <p>Shop</p>
-                    <a href='/videos'>Videos</a>
-                    <p>Collaboration</p>
+                    <a href='/videos'>Videos</a><br />
+                    <a href='collaboration'>Collaboration</a>
                 </div>
             </div>
             {console.log("props: ", this.props)}

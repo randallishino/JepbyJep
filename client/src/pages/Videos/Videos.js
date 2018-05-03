@@ -23,7 +23,7 @@ render() {
         <Col className="logo" xs="1">
           <a href='/home'>
             JEPbyJEP
-          </a>
+          </a>  
         </Col>
       </Row>
       <Row>

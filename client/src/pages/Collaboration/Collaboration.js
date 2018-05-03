@@ -28,7 +28,7 @@ render() {
           <a className="linkfont" href='collaboration'>Collaboration</a>
         </Col>
         <Col sm={{ size: 'auto', offset: 1 }}>
-        <div className="Collaboration">
+        <div className="collaboration">
           <div className="collab-image">
             <img src="https://i.imgur.com/5b2aabN.png" class="imgcollab"></img>
           </div>

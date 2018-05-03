@@ -1,46 +1,46 @@
-require('dotenv').config();
-const PORT = process.env.PORT || 3000;
-const express = require("express");
-const bodyParser = require('body-parser');
-const app = express();
-const session = require ('express-session');
-const cookieParser = require('cookie-parser');
-const morgan = require('morgan');
-const passport = require('passport');
-const facebook = require('passport-facebook');
-const mongoose = require('mongoose');
-const shopifyAPI = require('shopify-node-api');
+// require('dotenv').config();
+// const PORT = process.env.PORT || 3000;
+// const express = require("express");
+// const bodyParser = require('body-parser');
+// const app = express();
+// const session = require ('express-session');
+// const cookieParser = require('cookie-parser');
+// const morgan = require('morgan');
+// const passport = require('passport');
+// const facebook = require('passport-facebook');
+// const mongoose = require('mongoose');
+// const shopifyAPI = require('shopify-node-api');
 
 
-app.use(express.static('app/public'));
-//  parsing into json
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+// app.use(express.static('app/public'));
+// //  parsing into json
+// app.use(bodyParser.urlencoded({
+//   extended: true
+// }));
 
-// log every request to the console
-app.use(morgan('dev'));
+// // log every request to the console
+// app.use(morgan('dev'));
 
-// read cookies (needed for auth)
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+// // read cookies (needed for auth)
+// app.use(cookieParser());
+// app.use(bodyParser.urlencoded({
+//   extended: true
+// }));
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
-// required for passport
-app.use(session({
-    secret: 'session active',
-    resave: true,
-    saveUninitialized: true
-  }));
+// // required for passport
+// app.use(session({
+//     secret: 'session active',
+//     resave: true,
+//     saveUninitialized: true
+//   }));
 
-  // session secret
-app.use(passport.initialize());
+//   // session secret
+// app.use(passport.initialize());
 
-// persistent login sessions
-app.use(passport.session());
+// // persistent login sessions
+// app.use(passport.session());
  
 // //connection to shopify api  
 // const Shopify = new shopifyAPI({
@@ -70,6 +70,6 @@ app.use(passport.session());
 //     console.log(headers); // Headers returned from request
 //   });
 
-app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-   });
+// app.listen(PORT, function() {
+//     console.log("App listening on PORT " + PORT);
+//    });

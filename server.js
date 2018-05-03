@@ -18,6 +18,9 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+app.get('/',function(req,res) {
+    res.send('Hello');
+});
 // // log every request to the console
 // app.use(morgan('dev'));
 

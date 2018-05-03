@@ -21,7 +21,7 @@ render() {
             <Login />
             <div classname="container">
                 <div className="logo">
-                    JEPbyJEP
+                    <a href='/home'>JEPbyJEP</a>
                 </div>
                     <video id="homeVideo" loop autoPlay muted>
                         <source src={this.state.videoURL} type="video/mp4" />

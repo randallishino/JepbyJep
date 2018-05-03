@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import Footer from "../../components/Footer";
 import video from "../../compressed.mp4";
 import ReactPlayer from 'react-player';
+import "./Videos.css";
 
 class Videos extends Component {
     constructor(props) {
@@ -21,13 +22,13 @@ render() {
             <Login />
             <div classname="container">
                 <div className="logo">
-                    JEPbyJEP
+                    <a href='/home'>JEPbyJEP</a>
                 </div>
                     <div className="vimeos">
-                    <ReactPlayer url='https://vimeo.com/212865119?from=outro-embed'/>
-                    <ReactPlayer url='https://vimeo.com/212865384?from=outro-embed'/>
-                    <ReactPlayer url='https://vimeo.com/212861224?from=outro-embed'/>
-                    <ReactPlayer url='https://vimeo.com/212860229?from=outro-embed'/>
+                    <div className="videospace"><ReactPlayer url='https://vimeo.com/212865119?from=outro-embed'/></div>
+                    <div className="videospace"><ReactPlayer url='https://vimeo.com/212865384?from=outro-embed'/></div>
+                    <div className="videospace"><ReactPlayer url='https://vimeo.com/212861224?from=outro-embed'/></div>
+                    <div className="videospace"><ReactPlayer url='https://vimeo.com/212860229?from=outro-embed'/></div>
                         </div>
                 <div className="list">
                     <p>Shop</p>

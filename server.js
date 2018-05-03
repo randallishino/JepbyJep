@@ -12,14 +12,14 @@ const app = express();
 // const shopifyAPI = require('shopify-node-api');
 
 
-app.use(express.static('app/public'));
+app.use(express.static('client/build'));
 //  parsing into json
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
 app.get('/',function(req,res) {
-    res.send('Hello');
+    res.send('/');
 });
 // // log every request to the console
 // app.use(morgan('dev'));

@@ -5,6 +5,7 @@ import Wrapper from "../../components/Wrapper";
 import Login from "../../components/Login/Login";
 import Footer from "../../components/Footer/Footer";
 import { NavLink } from "react-router-dom";
+import { Container, Row, Col } from "reactstrap";
 
 
 class Home extends Component {
@@ -17,39 +18,31 @@ class Home extends Component {
 
 render() {
     return (
-        <Wrapper>
-            <div classname="container">
-                <div className="logo">
-                    <a href='/home'>JEPbyJEP</a>
-                </div>
-                    <video id="homeVideo" loop autoPlay muted>
-                        <source src={this.state.videoURL} type="video/mp4" />
-                    </video>
-                <div className="list">
-                    <p>Shop</p>
-                    <a href='/videos'>Videos</a><br />
-                    <a href='collaboration'>Collaboration</a>
-                </div>
-            </div>
-            {console.log("props: ", this.props)}
-            <Footer>
-                </Footer>
-        </Wrapper>
+      <Container className='container'>
+      <Row>
+        <Col className="logo" xs="1">
+          <a href='/home'>
+            JEPbyJEP
+          </a>
+        </Col>
+      </Row>
+      <Row>
+        <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
+          <a className="linkfont" href='/shop'>Shop</a><br />
+          <a className="linkfont" href='/videos'>Videos</a><br />
+          <a className="linkfont" href='collaboration'>Collaboration</a>
+        </Col>
+        <Col sm={{ size: 'auto', offset: 1 }}>
+          <video id="homeVideo" loop autoPlay muted>
+              <source src={this.state.videoURL} type="video/mp4" />
+          </video>
+        </Col>
+      </Row>
+        {console.log("props: ", this.props)}
+        </Container>
         )
     }
 }
 
-// const Home = () =>
-//
-// <div classname="container">
-//     <div className="logo">
-//     JEPbyJEP
-//     </div>
-//     <div className="navbar">
-//     <p>Shop</p>
-//     <p>Videos</p>
-//     <p>Collaboration</p>
-//     </div>
-// </div>
 
 export default Home;

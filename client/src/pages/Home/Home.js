@@ -18,7 +18,6 @@ class Home extends Component {
 render() {
     return (
         <Wrapper>
-            <Login />
             <div classname="container">
                 <div className="logo">
                     <a href='/home'>JEPbyJEP</a>

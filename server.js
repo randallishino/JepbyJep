@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
 const shopifyAPI = require('shopify-node-api');
 
 
-app.use(express.static('client/build'));
+app.use(express.static(__dirname + '/client/build'));
 //  parsing into json
 app.use(bodyParser.urlencoded({
   extended: true

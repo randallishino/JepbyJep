@@ -14,6 +14,7 @@
 .vimeos {
   margin-left: 40%;
   margin-top: 17%;
+  text-align: center;
 }
 
 .linkfont {
@@ -34,4 +35,56 @@
 
 .videospace {
   padding-bottom: 5%;
+}
+#title_vid {
+  margin-bottom: 100px;
+  font-family: aktiv-grotesk-std;
+}
+#vid_1_1 {
+  font-weight: bold;
+  font-family: 'Gothic A1', sans-serif;
+  margin-bottom: 30px;
+}
+#vid_1_2 {
+  font-family: 'Gothic A1', sans-serif;
+}
+#vid_1_3 {
+  font-family: 'Gothic A1', sans-serif;
+  margin-bottom: 30px;
+}
+#vid_2_1 {
+  font-weight: bold;
+  font-family: 'Gothic A1', sans-serif;
+  margin-bottom: 30px;
+}
+#vid_2_2 {
+  font-family: 'Gothic A1', sans-serif;
+}
+#vid_2_3 {
+  font-family: 'Gothic A1', sans-serif;
+  margin-bottom: 30px;
+}
+#vid_3_1 {
+  font-weight: bold;
+  font-family: 'Gothic A1', sans-serif;
+  margin-bottom: 30px;
+}
+#vid_3_2 {
+  font-family: 'Gothic A1', sans-serif;
+}
+#vid_3_3 {
+  font-family: 'Gothic A1', sans-serif;
+  margin-bottom: 30px;
+}
+#vid_4_1 {
+  font-weight: bold;
+  font-family: 'Gothic A1', sans-serif;
+  margin-bottom: 30px;
+}
+#vid_4_2 {
+  font-family: 'Gothic A1', sans-serif;
+}
+#vid_4_3 {
+  font-family: 'Gothic A1', sans-serif;
+  margin-bottom: 30px;
 }

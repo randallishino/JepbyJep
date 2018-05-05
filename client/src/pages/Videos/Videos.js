@@ -29,10 +29,46 @@ class Videos extends Component {
           <Row>
             <Col className="navi" xs="3">
                 <Row>
+<<<<<<< HEAD
                     <a className="linkfont" href='/shop'>Shop</a><br />
                 </Row>
                 <Row>
                     <a className="linkfont" href='/videos'>Videos</a><br />
+=======
+                    <Col className="logo" xs="1">
+                        <NavLink to='/home'>
+                            JEPbyJEP
+          </NavLink>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
+                        <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
+                        <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
+                        <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
+                    </Col>
+                    <Col sm={{ size: 'auto', offset: 1 }}>
+                        <div className="vimeos">
+                            <p id="title_vid">Below lie a compilation of films we as a collective have put together from concept to visual execution for your viewing pleasure. </p>
+                            <p id="vid_1_1">I: Hari Kari</p>
+                            <p id="vid_1_2">Hari Kari is part 1 of a 4 part mini short film series.</p>
+                            <p id="vid_1_3">An artist struggles to overcome her inner demons. The pressure mounts as she attempts to move forward with her career and put her past failures behind her. </p>
+                            <div className="videospace"><ReactPlayer url='https://vimeo.com/212865119?from=outro-embed' width="800px" /></div>
+                            <p id="vid_2_1">II: Interview</p>
+                            <p id="vid_2_2">Interview is part 2 of a 4 part mini short film series.</p>
+                            <p id="vid_2_3">A model awaits judgement from a designer looking for the face to launch a start up brand.</p>
+                            <div className="videospace"><ReactPlayer url='https://vimeo.com/212865384?from=outro-embed' width="800px" /></div>
+                            <p id="vid_3_1">III: Chess</p>
+                            <p id="vid_3_2">Chess is part 3 of a 4 part mini short film series.</p>
+                            <p id="vid_3_3">The Master teaches her apprentice.</p>
+                            <div className="videospace"><ReactPlayer url='https://vimeo.com/212861224?from=outro-embed' width="800px" /></div>
+                            <p id="vid_4_1">IV: Ritual</p>
+                            <p id="vid_4_2">Chess is part 4 of a 4 part mini short film series.</p>
+                            <p id="vid_4_3">A budding young model is initiated into an exclusive group.</p>
+                            <div className="videospace"><ReactPlayer url='https://vimeo.com/212860229?from=outro-embed' width="800px" /></div>
+                        </div>
+                    </Col>
+>>>>>>> 05518045bbe92cb273fec2669888932e89d42ba6
                 </Row>
                 <Row>
                     <a className="linkfont" href='collaboration'>Collaboration</a>

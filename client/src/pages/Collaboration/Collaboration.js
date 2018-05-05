@@ -14,13 +14,19 @@ render() {
     return (
       <Container className="home">
       <Row>
+<<<<<<< HEAD
         <Col className="logo" xs="12">
           <a href='/home'>
+=======
+        <Col className="logo" xs="1">
+          <NavLink to='/home'>
+>>>>>>> 05518045bbe92cb273fec2669888932e89d42ba6
             JEPbyJEP
-          </a>
+          </NavLink>
         </Col>
       </Row>
       <Row>
+<<<<<<< HEAD
         <Col className="navi" xs="3">
             <Row>
                 <a className="linkfont" href='/shop'>Shop</a><br />
@@ -31,6 +37,12 @@ render() {
             <Row>
                 <a className="linkfont" href='collaboration'>Collaboration</a>
             </Row>
+=======
+        <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
+          <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
+          <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
+          <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
+>>>>>>> 05518045bbe92cb273fec2669888932e89d42ba6
         </Col>
         <Col className="collab" xs="7">
             <img src="https://i.imgur.com/5b2aabN.png" class="imgcollab"></img>
@@ -39,6 +51,7 @@ render() {
           </div>
         </Col>
       </Row>
+<<<<<<< HEAD
         <Row>
             <Col xs="12">
                     <Footer>
@@ -46,6 +59,10 @@ render() {
             </Col>
         </Row>
           {console.log("props: ", this.props)}
+=======
+        <Footer>
+          </Footer>
+>>>>>>> 05518045bbe92cb273fec2669888932e89d42ba6
         </Container>
         )
     }

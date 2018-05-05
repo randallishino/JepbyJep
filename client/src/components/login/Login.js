@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import ReactModalLogin from 'react-modal-login';
 import {FormControl, FormGroup, ControlLabel, Button} from 'react-bootstrap';
 import {facebookConfig, googleConfig} from "./social-config";
-import './Login.css';
+import './login.css';
 
 class Login extends React.Component {
 

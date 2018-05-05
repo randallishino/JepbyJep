@@ -9,14 +9,12 @@ import Shop from "./pages/Shop";
 
 const App = () =>
   <Router>
-    <div>
       <Switch>
-        <Route exact path ="/" component={Landing} />
-        <Route exact path ="/home" component={Home} />
-        <Route exact path ="/videos" component={Videos} />
-        <Route exact path ="/collaboration" component={Collaboration} />
-        <Route exact path ="/shop" component={Shop} />
-        </Switch>
-      </div>
-      </Router>;
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/videos" component={Videos} />
+        <Route exact path="/collaboration" component={Collaboration} />
+        <Route exact path="/shop" component={Shop} />
+      </Switch>
+  </Router>;
 export default App;

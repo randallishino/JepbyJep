@@ -16,16 +16,16 @@ render() {
       <Container className='container'>
       <Row>
         <Col className="logo" xs="1">
-          <a href='/home'>
+          <NavLink to='/home'>
             JEPbyJEP
-          </a>
+          </NavLink>
         </Col>
       </Row>
       <Row>
         <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
-          <a className="linkfont" href='/shop'>Shop</a><br />
-          <a className="linkfont" href='/videos'>Videos</a><br />
-          <a className="linkfont" href='collaboration'>Collaboration</a>
+          <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
+          <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
+          <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
         </Col>
         <Col sm={{ size: 'auto', offset: 1 }}>
         <div className="collaboration">
@@ -38,7 +38,6 @@ render() {
         </div>
         </Col>
       </Row>
-        {console.log("props: ", this.props)}
         <Footer>
           </Footer>
         </Container>

@@ -38,6 +38,52 @@ class Shop extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
+      <Container className="home">
+      <Row>
+        <Col className="logo" xs="12">
+          <a href='/home'>
+            JEPbyJEP
+          </a>
+        </Col>
+      </Row>
+      <Row>
+        <Col className="navi" xs="3">
+            <Row>
+                <a className="linkfont" href='/shop'>Shop</a><br />
+            </Row>
+            <Row>
+                <a className="linkfont" href='/videos'>Videos</a><br />
+            </Row>
+            <Row>
+                <a className="linkfont" href='collaboration'>Collaboration</a>
+            </Row>
+        </Col>
+        <Col className="collab" xs="7">
+        <CardDeck>
+        <Card>
+          <CardImg/>
+          <CardBody>
+            <CardTitle>Summer 2018 </CardTitle>
+            <CardSubtitle>Card subtitle</CardSubtitle>
+              <CardText>$30 Brand new Shirt</CardText>
+              <Button>View Item</Button>
+            </CardBody>
+        </Card>
+      </CardDeck>
+        </Col>
+      </Row>
+        <Row>
+            <Col xs="12">
+                    <Footer>
+                    </Footer>
+            </Col>
+        </Row>
+          {console.log("props: ", this.props)}
+        </Container>
+        )
+    }
+=======
       <Container className='container'>
         <Row>
           <Col className="logo" xs="1">
@@ -78,6 +124,7 @@ class Shop extends Component {
       </Container>
     )
   }
+>>>>>>> 05518045bbe92cb273fec2669888932e89d42ba6
 }
 
 export default Shop;

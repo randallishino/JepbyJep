@@ -39,6 +39,8 @@ render() {
         </Col>
       </Row>
         {console.log("props: ", this.props)}
+        <Footer>
+          </Footer>
         </Container>
         )
     }

@@ -10,37 +10,42 @@ import { Container, Row, Col } from "reactstrap";
 
 class Collaboration extends Component {
 
-
 render() {
     return (
-      <Container className='container'>
+      <Container className="home">
       <Row>
-        <Col className="logo" xs="1">
+        <Col className="logo" xs="12">
           <a href='/home'>
             JEPbyJEP
           </a>
         </Col>
       </Row>
       <Row>
-        <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
-          <a className="linkfont" href='/shop'>Shop</a><br />
-          <a className="linkfont" href='/videos'>Videos</a><br />
-          <a className="linkfont" href='collaboration'>Collaboration</a>
+        <Col className="navi" xs="3">
+            <Row>
+                <a className="linkfont" href='/shop'>Shop</a><br />
+            </Row>
+            <Row>
+                <a className="linkfont" href='/videos'>Videos</a><br />
+            </Row>
+            <Row>
+                <a className="linkfont" href='collaboration'>Collaboration</a>
+            </Row>
         </Col>
-        <Col sm={{ size: 'auto', offset: 1 }}>
-        <div className="collaboration">
-          <div className="collab-image">
+        <Col className="collab" xs="7">
             <img src="https://i.imgur.com/5b2aabN.png" class="imgcollab"></img>
-          </div>
           <div className="collab-ipsum">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
           </div>
-        </div>
         </Col>
       </Row>
-        {console.log("props: ", this.props)}
-        <Footer>
-          </Footer>
+        <Row>
+            <Col xs="12">
+                    <Footer>
+                    </Footer>
+            </Col>
+        </Row>
+          {console.log("props: ", this.props)}
         </Container>
         )
     }

@@ -1,19 +1,10 @@
-.container {
-  position: absolute;
-}
-
 .logo a {
     color: black;
-    position: absolute;
-    margin-left: 5%;
     font-family: 'Alfa Slab One', cursive;
     font-size: 30px;
-    padding-top: 5%;
 }
 
 .vimeos {
-  margin-left: 40%;
-  margin-top: 17%;
   text-align: center;
 }
 
@@ -22,17 +13,6 @@
   text-decoration: none;
   font-size: 13px;
 }
-
-.navi {
-  position: absolute;
-  margin-left: 5%;
-  margin-top: 25%;
-}
-
-.footer {
-  position: absolute;
-}
-
 .videospace {
   padding-bottom: 5%;
 }

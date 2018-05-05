@@ -8,7 +8,8 @@ import ReactPlayer from 'react-player';
 import "./Shop.css";
 import { Container, Row, Col } from "reactstrap";
 import Cards from "../../components/Cards";
-
+import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
+  CardSubtitle, CardBody } from 'reactstrap';
 class Shop extends Component {
 
 
@@ -32,6 +33,17 @@ render() {
         <div className="collaboration">
           <div className="cards">
             // have to call cards here
+            <CardDeck>
+            <Card>
+              <CardImg/>
+              <CardBody>
+                <CardTitle>Summer 2018 </CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+          <CardText>$30 Brand new Shirt</CardText>
+          <Button>View Item</Button>
+        </CardBody>
+      </Card>
+      </CardDeck>
           </div>
         </div>
         </Col>

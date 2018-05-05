@@ -2,7 +2,7 @@ const mongoose = require ('mongoose'),
 Schema = mongoose.Schema,
 bcrypt = require('bcrypt-nodejs');
 
-const UserSchema = new Schema({
+const User = new Schema({
     username: {
         type: string,
         lowercase: true,
@@ -14,3 +14,5 @@ const UserSchema = new Schema({
         require: true
     }
 });
+
+module.exports = User;

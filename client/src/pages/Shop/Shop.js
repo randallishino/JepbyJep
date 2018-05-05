@@ -14,7 +14,7 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardDeck,
   CardSubtitle, CardBody
 } from 'reactstrap';
-import axios from "axios";
+import axios from "axios";  
 
 class Shop extends Component {
   // constructor() {
@@ -34,7 +34,11 @@ class Shop extends Component {
       this.setState({state: res.data})
     })
     .catch(err => console.log(err));
-    };
+  };
+
+  getTitle = () => {
+    // return this.state.data.products;
+  }
 
   render() {
     return (
@@ -55,7 +59,7 @@ class Shop extends Component {
           <Col sm={{ size: 'auto', offset: 1 }}>
             <div className="collaboration">
               <div className="cards">
-              <h1>{this.state.products}</h1>
+              <h1>{this.getTitle()}</h1>
                 // have to call cards here
                 <CardDeck>
                   <Card>

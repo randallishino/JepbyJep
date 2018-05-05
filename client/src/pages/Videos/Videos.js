@@ -29,12 +29,6 @@ class Videos extends Component {
           <Row>
             <Col className="navi" xs="3">
                 <Row>
-<<<<<<< HEAD
-                    <a className="linkfont" href='/shop'>Shop</a><br />
-                </Row>
-                <Row>
-                    <a className="linkfont" href='/videos'>Videos</a><br />
-=======
                     <Col className="logo" xs="1">
                         <NavLink to='/home'>
                             JEPbyJEP
@@ -68,7 +62,6 @@ class Videos extends Component {
                             <div className="videospace"><ReactPlayer url='https://vimeo.com/212860229?from=outro-embed' width="800px" /></div>
                         </div>
                     </Col>
->>>>>>> 05518045bbe92cb273fec2669888932e89d42ba6
                 </Row>
                 <Row>
                     <a className="linkfont" href='collaboration'>Collaboration</a>

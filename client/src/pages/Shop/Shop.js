@@ -11,7 +11,14 @@ import Cards from "../../components/Cards";
 import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
   CardSubtitle, CardBody } from 'reactstrap';
 class Shop extends Component {
+  constructor() {
+    super();
+      this.state = {}
+  };
 
+  componentWillMount() {
+
+  }
 
 render() {
     return (
@@ -49,6 +56,8 @@ render() {
         </Col>
       </Row>
         {console.log("props: ", this.props)}
+        <Footer>
+          </Footer>
         </Container>
         )
     }

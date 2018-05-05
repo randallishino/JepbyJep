@@ -30,7 +30,8 @@ render() {
         <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
           <a className="linkfont" href='/shop'>Shop</a><br />
           <a className="linkfont" href='/videos'>Videos</a><br />
-          <a className="linkfont" href='collaboration'>Collaboration</a>
+          <a className="linkfont" href='/collaboration'>Collaboration</a><br />
+          <a className="linkfont" href='/login'>Login / Register</a><br />
         </Col>
         <Col sm={{ size: 'auto', offset: 1 }}>
           <video id="homeVideo" loop autoPlay muted>

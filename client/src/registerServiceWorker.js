@@ -52,7 +52,6 @@ export default function register() {
   }
 }
 
-
 window.addEventListener('fetch', (event) => {
   if ( event.request.url.match( '^.*(\/api\/).*$' ) ) {
     return false;

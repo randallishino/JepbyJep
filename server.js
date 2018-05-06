@@ -10,6 +10,8 @@ const passport = require('passport');
 const facebook = require('passport-facebook');
 const mongoose = require('mongoose');
 const shopifyAPI = require('shopify-node-api');
+mongoose.Promise = require('bluebird');
+
 
 
 app.use(express.static(__dirname + '/client/build'));
@@ -45,6 +47,8 @@ app.use(passport.initialize());
 // persistent login sessions
 app.use(passport.session());
  
+var auth = require('./routes/auth');
+app.use('/api/auth', auth);
 //connection to shopify api  
 const Shopify = new shopifyAPI({
   shop: process.env.SHOPIFY, // MYSHOP.myshopify.com
@@ -85,3 +89,7 @@ function callback(err, data, headers) {
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
    });
+
+   mongoose.connect('mongodb://localhost/passport', { promiseLibrary: require('bluebird') })
+  .then(() =>  console.log('connection succesful'))
+  .catch((err) => console.error(err));

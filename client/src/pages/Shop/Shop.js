@@ -14,7 +14,7 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardDeck,
   CardSubtitle, CardBody
 } from 'reactstrap';
-import axios from "axios";  
+import axios from "axios";
 
 class Shop extends Component {
   // constructor() {
@@ -57,7 +57,7 @@ class Shop extends Component {
             <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
           </Col>
           <Col sm={{ size: 'auto', offset: 1 }}>
-            <div className="collaboration">
+            <div className="containerpages">
               <div className="cards">
               <h1>{this.getTitle()}</h1>
                 // have to call cards here

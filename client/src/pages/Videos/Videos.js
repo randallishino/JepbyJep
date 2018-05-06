@@ -31,7 +31,7 @@ class Videos extends Component {
                   <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
                   <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
                 </Col>
-                <Col className="collab" xs="7">
+                <Col className="containerpages" xs="7">
                 <div className="vimeos">
                     <p id="title_vid">Below lie a compilation of films we as a collective have put together from concept to visual execution for your viewing pleasure. </p>
                     <p id="vid_1_1">I: Hari Kari</p>

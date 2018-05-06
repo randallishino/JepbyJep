@@ -31,12 +31,12 @@ render() {
         </Col>
       </Row>
       <Row>
-        <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
+        <Col className="navi" xs="3">
           <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
           <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
           <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
         </Col>
-        <Col className="vid" xs="9">
+        <Col className="containerpages" xs="9">
           <video id="homeVideo" loop autoPlay muted>
               <source src={this.state.videoURL} type="video/mp4" />
           </video>

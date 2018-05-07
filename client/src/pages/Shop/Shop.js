@@ -19,7 +19,9 @@ import axios from "axios";
 class Shop extends Component {
   // constructor() {
   //   super();
-    state = {};
+    state = {
+      products: {}
+    };
 
   componentDidMount() {
     this.getData();
@@ -29,11 +31,10 @@ class Shop extends Component {
 
   getData = () => {
     API.getData()
-    .then(res => {
-      console.log(res);
-      this.setState({state: res.data})
-    })
-    .catch(err => console.log(err));
+      .then(res =>
+        this.setState({ products: res.data})
+      )
+      .catch(err => console.log(err));
   };
 
   getTitle = () => {
@@ -54,7 +55,9 @@ class Shop extends Component {
           <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
             <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
             <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
-            <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
+            <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink><br />
+            <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
+
           </Col>
           <Col sm={{ size: 'auto', offset: 1 }}>
             <div className="containerpages">

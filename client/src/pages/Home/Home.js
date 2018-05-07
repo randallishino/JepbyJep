@@ -34,7 +34,9 @@ render() {
         <Col className="navi" xs="3">
           <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
           <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
-          <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
+          <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink><br />
+          <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
+
         </Col>
         <Col className="containerpages" xs="9">
           <video id="homeVideo" loop autoPlay muted>

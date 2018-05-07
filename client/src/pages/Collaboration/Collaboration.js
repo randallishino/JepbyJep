@@ -24,7 +24,9 @@ render() {
         <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
           <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
           <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
-          <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
+          <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink><br />
+          <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
+
         </Col>
         <Col className="collab" xs="7">
             <img src="https://i.imgur.com/5b2aabN.png" class="imgcollab"></img>

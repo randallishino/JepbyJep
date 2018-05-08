@@ -5,8 +5,7 @@ import Login from "../Login";
 
 const Footer = () => {
     return (
-    <div className="navbar-fixed">
-    <div className="container">
+    <div className="navbar">
         <div className="row">
         <i className="fab fa-facebook"></i>
         <a href="https://www.instagram.com/jepbyjep.space/"><i style={{color:"grey"}}  id="instagram" className="fab fa-instagram"></i></a>
@@ -14,7 +13,6 @@ const Footer = () => {
         <div className="login-button">
         </div>
         </div>
-    </div>
     </div>
     )
     };

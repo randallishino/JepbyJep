@@ -24,7 +24,7 @@ class Home extends Component {
 
 render() {
     return (
-      <Container className="home">
+     <Container className="home">
       <Row>
         <Col className="logo" xs="1">
           <NavLink to='/home'>
@@ -46,9 +46,13 @@ render() {
           </video>
         </Col>
       </Row>
-        <Footer>
-          </Footer>
-        </Container>
+      <Row>
+        <Col className="footer" xs="1">
+            <Footer>
+            </Footer>
+        </Col>
+      </Row>
+    </Container>
         )
     }
 }

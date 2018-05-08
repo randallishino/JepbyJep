@@ -1,70 +1,63 @@
-.logo a {
-    color: black;
-    font-family: 'Alfa Slab One', cursive;
-    font-size: 30px;
+.logo {
+    width: 250px;
+    height: 80px;
+    margin-right: 15%;
 }
 
 .vimeos {
-  text-align: center;
+    width: 700px;
+}
+
+#title_vid {
+    width: 700px;
 }
 
 .linkfont {
+  font-family: 'Inconsolata', monospace;
   color: black;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
 }
-.videospace {
-  padding-bottom: 5%;
+
+.navi {
+  padding-right: 5%;
+  padding-left: 3.5%;
+  padding-top: 10%;
 }
-#title_vid {
-  margin-bottom: 100px;
-  font-family: aktiv-grotesk-std;
+
+@media screen and (max-width: 400px) {
+  .vimeos {
+    width: 200px;
+    height: 250px;
+  }
+  .navi {
+    padding-top: 20%;
+  }
 }
-#vid_1_1 {
-  font-weight: bold;
-  font-family: 'Gothic A1', sans-serif;
-  margin-bottom: 30px;
+
+@media screen and (max-width: 500px) {
+  .vimeos {
+    width: 250px;
+    height: 300px;
+  }
+  .navi {
+    padding-top: 15%;
+  }
 }
-#vid_1_2 {
-  font-family: 'Gothic A1', sans-serif;
+
+@media screen and (max-width: 600px) {
+  .vimeos {
+    width: 400px;
+    height: 450px;
+  }
+  .navi {
+    padding-top: 15%;
+  }
 }
-#vid_1_3 {
-  font-family: 'Gothic A1', sans-serif;
-  margin-bottom: 30px;
-}
-#vid_2_1 {
-  font-weight: bold;
-  font-family: 'Gothic A1', sans-serif;
-  margin-bottom: 30px;
-}
-#vid_2_2 {
-  font-family: 'Gothic A1', sans-serif;
-}
-#vid_2_3 {
-  font-family: 'Gothic A1', sans-serif;
-  margin-bottom: 30px;
-}
-#vid_3_1 {
-  font-weight: bold;
-  font-family: 'Gothic A1', sans-serif;
-  margin-bottom: 30px;
-}
-#vid_3_2 {
-  font-family: 'Gothic A1', sans-serif;
-}
-#vid_3_3 {
-  font-family: 'Gothic A1', sans-serif;
-  margin-bottom: 30px;
-}
-#vid_4_1 {
-  font-weight: bold;
-  font-family: 'Gothic A1', sans-serif;
-  margin-bottom: 30px;
-}
-#vid_4_2 {
-  font-family: 'Gothic A1', sans-serif;
-}
-#vid_4_3 {
-  font-family: 'Gothic A1', sans-serif;
-  margin-bottom: 30px;
+
+@media screen and (max-width: 700px) {
+  .vimeos {
+    width: 500px;
+    height: 550px;
+  }
 }

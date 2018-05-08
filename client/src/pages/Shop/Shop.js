@@ -15,6 +15,8 @@ import {
   CardSubtitle, CardBody
 } from 'reactstrap';
 import axios from "axios";
+import logojepbyjep from "../../images/logojepbyjep.png";
+
 
 class Shop extends Component {
   // constructor() {
@@ -47,19 +49,19 @@ class Shop extends Component {
         <Row>
           <Col className="logo" xs="1">
             <NavLink to='/home'>
-              JEPbyJEP
+              <img class="logo" src={logojepbyjep}></img>
           </NavLink>
           </Col>
         </Row>
         <Row>
-          <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
+          <Col className="navi" xs="3">
             <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
             <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
             <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink><br />
             <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
 
           </Col>
-          <Col sm={{ size: 'auto', offset: 1 }}>
+          <Col xs="9">
             <div className="containerpages">
               <div className="cards">
               <h1>{this.getTitle()}</h1>

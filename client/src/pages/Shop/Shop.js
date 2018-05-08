@@ -56,9 +56,40 @@ class Shop extends Component {
           <Col className="navi" xs="3">
             <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
             <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
-            <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
+            <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink><br />
+            <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
           </Col>
-            <Col xs="9">
+            <Col className="containerpages" xs="9">
+              {console.log(this.state)}
+              {this.state.products.map(item=> (
+             <Cards
+               title={item.title}
+               price={item.variants[0].price}
+               description={item.body_html}
+               image={item.images[0].src}
+             />
+           ))}
+          </Col>
+        </Row>
+        <Row>
+          <Col className="navi" xs="3">
+          </Col>
+            <Col className="containerpages" xs="9">
+              {console.log(this.state)}
+              {this.state.products.map(item=> (
+             <Cards
+               title={item.title}
+               price={item.variants[0].price}
+               description={item.body_html}
+               image={item.images[0].src}
+             />
+           ))}
+          </Col>
+        </Row>
+        <Row>
+          <Col className="navi" xs="3">
+          </Col>
+            <Col className="containerpages" xs="9">
               {console.log(this.state)}
               {this.state.products.map(item=> (
              <Cards

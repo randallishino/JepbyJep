@@ -9,8 +9,9 @@
 }
 
 #title_vid {
-    font-family: 'Playball', cursive;
+    font-family: 'Cabin', cursive;
     font-size: 24px;
+    width: 700px;
 }
 
 .vidname {
@@ -19,11 +20,8 @@
 }
 
 .vidsummary {
-    font-family: 'Khula', cursive;
-}
-
-#title_vid {
-    width: 700px;
+    font-family: 'Cabin', cursive;
+    font-size: 16px;
 }
 
 .linkfont {

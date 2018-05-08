@@ -62,26 +62,10 @@ class Shop extends Component {
             <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
             <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
           </Col>
-            <Col className="containerpages" xs="9">
+            <Col xs="9">
               <div className="cards">
-                {/* <h1>{this.state.data && this.state}</h1> */}
-                {/* // have to call cards here */}
-
-                {this.state.products.map(item => (
-                  <CardDeck>
-                    <Card>
-                      <CardImg> {item.image} </CardImg >
-                      <CardBody>
-                        <CardTitle>{item.title}</CardTitle>
-                        <CardSubtitle></CardSubtitle>
-                        <CardText>$30 Brand new Shirt</CardText>
-                        <Button>View Item</Button>
-                      </CardBody>
-                    </Card>
-                  </CardDeck>
-                    )
-                )}
-              </div>
+                <p>hello</p>
+            </div>
           </Col>
         </Row>
         {/* {console.log("props: ", this.props)} */}

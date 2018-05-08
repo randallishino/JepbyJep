@@ -8,7 +8,7 @@ import ReactPlayer from 'react-player';
 import "./Collaboration.css";
 import { Container, Row, Col } from "reactstrap";
 import logojepbyjep from "../../images/logojepbyjep.png";
-
+import collabrocio from "../../images/img1.JPG";
 
 class Collaboration extends Component {
 
@@ -31,8 +31,9 @@ render() {
 
         </Col>
         <Col className="collab" xs="9">
-            <img src="https://i.imgur.com/5b2aabN.png" class="imgcollab"></img>
+            <img src={collabrocio} class="imgcollab"></img>
           <div className="collab-ipsum">
+          <p className="collab-partner">JepbyJep X Rocio</p>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
           </div>
         </Col>

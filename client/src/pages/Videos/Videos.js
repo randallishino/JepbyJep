@@ -36,21 +36,17 @@ class Videos extends Component {
                 <Col className="containerpages" xs="9">
                 <div className="vimeos">
                     <center><p id="title_vid">Below lie a compilation of films<br /> we as a collective have put together from concept<br /> to visual execution for your viewing pleasure. </p></center><br/>
-                    <p id="vid_1_1">I: Hari Kari</p>
-                    <p id="vid_1_2">Hari Kari is part 1 of a 4 part mini short film series.</p>
-                    <p id="vid_1_3">An artist struggles to overcome her inner demons. The pressure mounts as she attempts to move forward with her career and put her past failures behind her. </p>
+                    <p class="vidname">I: Hari Kari</p>
+                    <p class="vidsummary">An artist struggles to overcome her inner demons. The pressure mounts as she attempts to move forward with her career and put her past failures behind her. </p>
                     <div className="videospace"><ReactPlayer url='https://vimeo.com/212865119?from=outro-embed' /></div><br/>
-                    <p id="vid_2_1">II: Interview</p>
-                    <p id="vid_2_2">Interview is part 2 of a 4 part mini short film series.</p>
-                    <p id="vid_2_3">A model awaits judgement from a designer looking for the face to launch a start up brand.</p>
+                    <p class="vidname">II: Interview</p>
+                    <p class="vidsummary">A model awaits judgement from a designer looking for the face to launch a start up brand.</p>
                     <div className="videospace"><ReactPlayer url='https://vimeo.com/212865384?from=outro-embed' /></div><br/>
-                    <p id="vid_3_1">III: Chess</p>
-                    <p id="vid_3_2">Chess is part 3 of a 4 part mini short film series.</p>
-                    <p id="vid_3_3">The Master teaches her apprentice.</p>
+                    <p class="vidname">III: Chess</p>
+                    <p class="vidsummary">The Master teaches her apprentice.</p>
                     <div className="videospace"><ReactPlayer url='https://vimeo.com/212861224?from=outro-embed' /></div><br/>
-                    <p id="vid_4_1">IV: Ritual</p>
-                    <p id="vid_4_2">Chess is part 4 of a 4 part mini short film series.</p>
-                    <p id="vid_4_3">A budding young model is initiated into an exclusive group.</p>
+                    <p class="vidname">IV: Ritual</p>
+                    <p class="vidsummary">A budding young model is initiated into an exclusive group.</p>
                     <div className="videospace"><ReactPlayer url='https://vimeo.com/212860229?from=outro-embed' /></div><br/>
                 </div>
                 </Col>

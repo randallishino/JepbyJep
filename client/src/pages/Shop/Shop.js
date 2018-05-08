@@ -7,13 +7,9 @@ import video from "../../compressed.mp4";
 import ReactPlayer from 'react-player';
 import "./Shop.css";
 import API from "../../utils/api";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, CarouselItem } from "reactstrap";
 import Cards from "../../components/Cards";
 import Client, { Shopify } from 'shopify-buy';
-import {
-  Card, Button, CardImg, CardTitle, CardText, CardDeck,
-  CardSubtitle, CardBody
-} from 'reactstrap';
 import axios from "axios";
 import logojepbyjep from "../../images/logojepbyjep.png";
 
@@ -37,7 +33,7 @@ class Shop extends Component {
         this.setState({
           products: res.data.products
         });
-        // console.log('state: ', this.state.products);
+        console.log('state: ', this.state.products);
       })
       .catch(err => console.log(err));
   };
@@ -63,12 +59,17 @@ class Shop extends Component {
             <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
           </Col>
             <Col xs="9">
-              <div className="cards">
-                <p>hello</p>
-            </div>
+              {console.log(this.state)}
+              {this.state.products.map(item=> (
+             <Cards
+               title={item.title}
+               price={item.variants[0].price}
+               description={item.body_html}
+               image={item.images[0].src}
+             />
+           ))}
           </Col>
         </Row>
-        {/* {console.log("props: ", this.props)} */}
         <Footer>
         </Footer>
       </Container>

@@ -27,7 +27,7 @@ render() {
           <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
           <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
           <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink><br />
-          <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
+          <NavLink className="linkfont" to='/login'>Login/Register</NavLink><br />
 
         </Col>
         <Col className="collab" xs="9">

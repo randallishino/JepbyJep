@@ -62,11 +62,7 @@ class Shop extends Component {
             <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
             <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
           </Col>
-          <Col sm={{ size: 'auto', offset: 1 }}>
-            <div className="collaboration">
-
-            <Col xs="9">
-            <div className="containerpages">
+            <Col className="containerpages" xs="9">
               <div className="cards">
                 {/* <h1>{this.state.data && this.state}</h1> */}
                 {/* // have to call cards here */}
@@ -83,11 +79,9 @@ class Shop extends Component {
                       </CardBody>
                     </Card>
                   </CardDeck>
-                )
+                    )
                 )}
-
               </div>
-            </div>
           </Col>
         </Row>
         {/* {console.log("props: ", this.props)} */}

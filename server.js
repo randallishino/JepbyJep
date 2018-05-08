@@ -1,5 +1,6 @@
 require('dotenv').config();
 const PORT = process.env.PORT || 3000;
+const path = require('path');
 const express = require("express");
 const bodyParser = require('body-parser');
 const app = express();
@@ -74,6 +75,11 @@ app.get('/api/products', function(req, res) {
 
         res.send(data);
     });
+});
+
+
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve('./client/build/index.html'));
 });
 
 

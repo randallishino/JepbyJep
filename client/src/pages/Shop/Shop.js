@@ -19,27 +19,30 @@ import axios from "axios";
 class Shop extends Component {
   // constructor() {
   //   super();
-    state = {
-      products: {}
-    };
+  state = {
+    products: []
+  };
 
   componentDidMount() {
-    this.getData();
+    this.getProducts();
     console.log('this step has been completed');
   }
 
-
-  getData = () => {
+  getProducts = () => {
     API.getData()
-      .then(res =>
-        this.setState({ products: res.data})
-      )
+      .then(res => {
+        // console.log('res: ', res);
+        this.setState({
+          products: res.data.products
+        });
+        // console.log('state: ', this.state.products);
+      })
       .catch(err => console.log(err));
   };
 
-  getTitle = () => {
-    // return this.state.data.products;
-  }
+  // getTitle = () => {
+  //   return this.data.products.map(item => item.title);
+  // }
 
   render() {
     return (
@@ -55,31 +58,34 @@ class Shop extends Component {
           <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
             <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
             <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
-            <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink><br />
-            <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
-
+            <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
           </Col>
           <Col sm={{ size: 'auto', offset: 1 }}>
-            <div className="containerpages">
+            <div className="collaboration">
               <div className="cards">
-              <h1>{this.getTitle()}</h1>
-                // have to call cards here
-                <CardDeck>
-                  <Card>
-                    <CardImg />
-                    <CardBody>
-                      <CardTitle>Summer 2018 </CardTitle>
-                      <CardSubtitle>Card subtitle</CardSubtitle>
-                      <CardText>$30 Brand new Shirt</CardText>
-                      <Button>View Item</Button>
-                    </CardBody>
-                  </Card>
-                </CardDeck>
+                {/* <h1>{this.state.data && this.state}</h1> */}
+                {/* // have to call cards here */}
+
+                {this.state.products.map(item => (
+                  <CardDeck>
+                    <Card>
+                      <CardImg> {item.image} </CardImg>
+                      <CardBody>
+                        <CardTitle>{item.title}</CardTitle>
+                        <CardSubtitle></CardSubtitle>
+                        <CardText>$30 Brand new Shirt</CardText>
+                        <Button>View Item</Button>
+                      </CardBody>
+                    </Card>
+                  </CardDeck>
+                )
+                )}
+
               </div>
             </div>
           </Col>
         </Row>
-        {console.log("props: ", this.props)}
+        {/* {console.log("props: ", this.props)} */}
         <Footer>
         </Footer>
       </Container>

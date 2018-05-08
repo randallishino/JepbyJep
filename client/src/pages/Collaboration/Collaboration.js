@@ -7,6 +7,8 @@ import video from "../../compressed.mp4";
 import ReactPlayer from 'react-player';
 import "./Collaboration.css";
 import { Container, Row, Col } from "reactstrap";
+import logojepbyjep from "../../images/logojepbyjep.png";
+
 
 class Collaboration extends Component {
 
@@ -16,19 +18,19 @@ render() {
       <Row>
         <Col className="logo" xs="1">
           <NavLink to='/home'>
-            JEPbyJEP
+            <img class="logo" src={logojepbyjep}></img>
           </NavLink>
         </Col>
       </Row>
       <Row>
-        <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
+        <Col className="navi" xs="3">
           <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
           <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
           <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink><br />
           <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
 
         </Col>
-        <Col className="collab" xs="7">
+        <Col className="collab" xs="9">
             <img src="https://i.imgur.com/5b2aabN.png" class="imgcollab"></img>
           <div className="collab-ipsum">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).

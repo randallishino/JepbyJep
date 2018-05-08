@@ -15,6 +15,8 @@ import {
   CardSubtitle, CardBody
 } from 'reactstrap';
 import axios from "axios";
+import logojepbyjep from "../../images/logojepbyjep.png";
+
 
 class Shop extends Component {
   // constructor() {
@@ -50,18 +52,21 @@ class Shop extends Component {
         <Row>
           <Col className="logo" xs="1">
             <NavLink to='/home'>
-              JEPbyJEP
+            <img class="logo" src={logojepbyjep}></img>
           </NavLink>
           </Col>
         </Row>
         <Row>
-          <Col className="navi" sm={{ size: 'auto', offset: 1 }}>
+          <Col className="navi" xs="3">
             <NavLink className="linkfont" to='/shop'>Shop</NavLink><br />
             <NavLink className="linkfont" to='/videos'>Videos</NavLink><br />
             <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink>
           </Col>
           <Col sm={{ size: 'auto', offset: 1 }}>
             <div className="collaboration">
+
+            <Col xs="9">
+            <div className="containerpages">
               <div className="cards">
                 {/* <h1>{this.state.data && this.state}</h1> */}
                 {/* // have to call cards here */}
@@ -69,7 +74,7 @@ class Shop extends Component {
                 {this.state.products.map(item => (
                   <CardDeck>
                     <Card>
-                      <CardImg> {item.image} </CardImg>
+                      <CardImg> {item.image} </CardImg >
                       <CardBody>
                         <CardTitle>{item.title}</CardTitle>
                         <CardSubtitle></CardSubtitle>

@@ -6,6 +6,8 @@ import Login from "../../components/Login/Login";
 import Footer from "../../components/Footer/Footer";
 import { NavLink } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
+import logojepbyjep from "../../images/logojepbyjep.png";
+
 
 
 class Home extends Component {
@@ -22,11 +24,11 @@ class Home extends Component {
 
 render() {
     return (
-      <Container className="home">
+     <Container className="home">
       <Row>
         <Col className="logo" xs="1">
           <NavLink to='/home'>
-            JEPbyJEP
+            <img class="logo" src={logojepbyjep}></img>
           </NavLink>
         </Col>
       </Row>
@@ -44,9 +46,13 @@ render() {
           </video>
         </Col>
       </Row>
-        <Footer>
-          </Footer>
-        </Container>
+      <Row>
+        <Col className="footer" xs="1">
+            <Footer>
+            </Footer>
+        </Col>
+      </Row>
+    </Container>
         )
     }
 }

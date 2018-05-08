@@ -6,6 +6,8 @@ import Login from "../../components/Login/Login";
 import Footer from "../../components/Footer/Footer";
 import { NavLink } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
+import logojepbyjep from "../../images/logojepbyjep.png";
+
 
 
 class Home extends Component {
@@ -26,7 +28,7 @@ render() {
       <Row>
         <Col className="logo" xs="1">
           <NavLink to='/home'>
-            JEPbyJEP
+            <img class="logo" src={logojepbyjep}></img>
           </NavLink>
         </Col>
       </Row>

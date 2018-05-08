@@ -1,12 +1,19 @@
 
 .imgcollab {
-  width: 800px;
+  width: 700px;
 }
 
 .collab-ipsum {
-  width: 800px;
+  width: 700px;
+  font-family: 'Khula', cursive;
 }
 
+.collab-partner {
+    padding-top: 5%;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Khula', cursive;
+}
 
 .logo {
     width: 250px;

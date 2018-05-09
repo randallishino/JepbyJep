@@ -57,9 +57,11 @@
     z-index:1;
     position: absolute;
     color:  #FFFAFA;
-    margin: 0 auto;
-    margin-left: 40%;
-    margin-top: 25%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50vh;
+    /* margin-left: 40%;
+    margin-top: 25%; */
   }
 
   .grow:hover
@@ -67,4 +69,7 @@
         -webkit-transform: scale(1.3);
         -ms-transform: scale(1.3);
         transform: scale(1.3);
+}
+.col-centered {
+  margin: 0 auto;
 }

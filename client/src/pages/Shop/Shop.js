@@ -6,41 +6,109 @@ import Footer from "../../components/Footer";
 import video from "../../compressed.mp4";
 import ReactPlayer from 'react-player';
 import "./Shop.css";
-import API from "../../utils/api";
+// import API from "../../utils/api";
 import { Container, Row, Col, CarouselItem } from "reactstrap";
-import Cards from "../../components/Cards";
+// import Cards from "../../components/Cards";
 import Client, { Shopify } from 'shopify-buy';
 import axios from "axios";
 import logojepbyjep from "../../images/logojepbyjep.png";
+import Products from "../../components/Products";
+import Cart from "../../components/Cart";
 
 
 class Shop extends Component {
-  // constructor() {
-  //   super();
-  state = {
-    products: []
-  };
+  constructor() {
+    super();
 
-  componentDidMount() {
-    this.getProducts();
-    console.log('this step has been completed');
+    this.state = {
+      isCartOpen: false,
+      checkout: { lineItems: [] },
+      products: [],
+      shop: {},
+    };
+
+    this.handleCartClose = this.handleCartClose.bind(this);
+    this.addVariantToCart = this.addVariantToCart.bind(this);
+    this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
+    this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
   }
 
-  getProducts = () => {
-    API.getData()
-      .then(res => {
-        // console.log('res: ', res);
-        this.setState({
-          products: res.data.products
-        });
-        console.log('state: ', this.state.products);
-      })
-      .catch(err => console.log(err));
-  };
+  componentDidMount() {
+    const shopifyClient = Client.buildClient({
+      storefrontAccessToken: '0c729c3d521e6d7523cd2f6f9cd4707f',
+      domain: 'JepbyJep.myshopify.com'
+    });
+  
+    console.log(this.state);
+    this.setState({
+      shopifyClient
+    });
+    console.log(this.state);
+  }
 
-  // getTitle = () => {
-  //   return this.data.products.map(item => item.title);
-  // }
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.shopifyClient && !prevState.shopifyClient) {
+      this.state.shopifyClient.checkout.create().then((res) => {
+        this.setState({
+          checkout: res,
+        });
+      });
+
+      this.state.shopifyClient.product.fetchAll().then((res) => {
+        this.setState({
+          products: res,
+        });
+      });
+
+      this.state.shopifyClient.shop.fetchInfo().then((res) => {
+        this.setState({
+          shop: res,
+        });
+      });
+    }
+  }
+
+addVariantToCart(variantId, quantity){
+  this.setState({
+    isCartOpen: true,
+  });
+
+  const lineItemsToAdd = [{variantId, quantity: parseInt(quantity, 10)}]
+  const checkoutId = this.state.checkout.id
+
+  return this.state.shopifyClient.checkout.addLineItems(checkoutId, lineItemsToAdd).then(res => {
+    this.setState({
+      checkout: res,
+    });
+  });
+}
+
+updateQuantityInCart(lineItemId, quantity) {
+  const checkoutId = this.state.checkout.id
+  const lineItemsToUpdate = [{id: lineItemId, quantity: parseInt(quantity, 10)}]
+
+  return this.state.shopifyClient.checkout.updateLineItems(checkoutId, lineItemsToUpdate).then(res => {
+    this.setState({
+      checkout: res,
+    });
+  });
+}
+
+removeLineItemInCart(lineItemId) {
+  const checkoutId = this.state.checkout.id
+
+  return this.state.shopifyClient.checkout.removeLineItems(checkoutId, [lineItemId]).then(res => {
+    this.setState({
+      checkout: res,
+    });
+  });
+}
+
+handleCartClose() {
+  this.setState({
+    isCartOpen: false,
+  });
+}
 
   render() {
     return (
@@ -59,46 +127,29 @@ class Shop extends Component {
             <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink><br />
             <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
           </Col>
-            <Col className="containerpages" xs="9">
-              {console.log(this.state)}
-              {this.state.products.map(item=> (
-             <Cards
-               title={item.title}
-               price={item.variants[0].price}
-               description={item.body_html}
-               image={item.images[0].src}
-             />
-           ))}
-          </Col>
-        </Row>
+          </Row>
         <Row>
           <Col className="navi" xs="3">
           </Col>
             <Col className="containerpages" xs="9">
-              {console.log(this.state)}
-              {this.state.products.map(item=> (
-             <Cards
-               title={item.title}
-               price={item.variants[0].price}
-               description={item.body_html}
-               image={item.images[0].src}
-             />
-           ))}
-          </Col>
-        </Row>
-        <Row>
-          <Col className="navi" xs="3">
-          </Col>
-            <Col className="containerpages" xs="9">
-              {console.log(this.state)}
-              {this.state.products.map(item=> (
-             <Cards
-               title={item.title}
-               price={item.variants[0].price}
-               description={item.body_html}
-               image={item.images[0].src}
-             />
-           ))}
+            
+            {!this.state.isCartOpen &&
+            <div className="App__view-cart-wrapper">
+              <button className="App__view-cart" onClick={()=> this.setState({isCartOpen: true})}>Cart</button>
+            </div>
+            }
+            <Products
+          products={this.state.products}
+          client={this.props.client}
+          addVariantToCart={this.addVariantToCart}
+        />
+        <Cart
+          checkout={this.state.checkout}
+          isCartOpen={this.state.isCartOpen}
+          handleCartClose={this.handleCartClose}
+          updateQuantityInCart={this.updateQuantityInCart}
+          removeLineItemInCart={this.removeLineItemInCart}
+        />
           </Col>
         </Row>
         <Footer>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import VariantSelector from '../VariantSelector';
-
+import Client from "shopify-buy";
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -15,6 +15,20 @@ class Product extends Component {
     this.handleQuantityChange = this.handleQuantityChange.bind(this);
     this.findImage = this.findImage.bind(this);
   }
+
+
+  componentDidMount() {
+      const shopifyClient = Client.buildClient({
+        storefrontAccessToken: '0c729c3d521e6d7523cd2f6f9cd4707f',
+        domain: 'JepbyJep.myshopify.com'
+      });
+    
+      console.log(this.state);
+      this.setState({
+        shopifyClient
+      });
+      console.log(this.state);
+    }
 
   findImage(images, variantId) {
     const primary = images[0];
@@ -31,7 +45,7 @@ class Product extends Component {
     let selectedOptions = this.state.selectedOptions;
     selectedOptions[target.name] = target.value;
 
-    const selectedVariant = this.props.client.product.helpers.variantForOptions(this.props.product, selectedOptions)
+    const selectedVariant = this.state.shopifyClient.product.helpers.variantForOptions(this.props.product, selectedOptions)
 
     this.setState({
       selectedVariant: selectedVariant,

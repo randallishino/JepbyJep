@@ -1,9 +1,14 @@
 .imgpic {
     width: 233px;
-    height: 400px;
+    height: 360px;
     padding: 2%;
+    padding-top: 10%;
 }
 
 .productsum {
     padding-left: 10%;
+}
+
+.Product {
+  padding-bottom: 5%;
 }

@@ -21,6 +21,9 @@
     padding-left: 3.5%;
     padding-top: 10%;
 }
+.shopcart {
+    float: right;
+}
 
 @media screen and (max-width: 400px) {
   .cards {

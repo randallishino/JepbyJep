@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import VariantSelector from '../VariantSelector';
 import Client from "shopify-buy";
+import "./Product.css";
+
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +24,7 @@ class Product extends Component {
         storefrontAccessToken: '0c729c3d521e6d7523cd2f6f9cd4707f',
         domain: 'JepbyJep.myshopify.com'
       });
-    
+
       console.log(this.state);
       this.setState({
         shopifyClient
@@ -74,14 +76,14 @@ class Product extends Component {
     });
     return (
       <div className="Product">
-        {this.props.product.images.length ? <img src={variantImage.src} alt={`${this.props.product.title} product shot`}/> : null}
+        {this.props.product.images.length ? <img className="imgpic" src={variantImage.src} alt={`${this.props.product.title} product shot`}/> : null}
         <h5 className="Product__title">{this.props.product.title}</h5>
         <span className="Product__price">${variant.price}</span>
-        {variantSelectors}
+        {variantSelectors}<br />
         <label className="Product__option">
           Quantity
           <input min="1" type="number" defaultValue={variantQuantity} onChange={this.handleQuantityChange}></input>
-        </label>
+        </label><br />
         <button className="Product__buy button" onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}>Add to Cart</button>
       </div>
     );
@@ -89,4 +91,3 @@ class Product extends Component {
 }
 
 export default Product;
-

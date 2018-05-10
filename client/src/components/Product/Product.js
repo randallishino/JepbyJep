@@ -77,6 +77,7 @@ class Product extends Component {
     return (
       <div className="Product">
         {this.props.product.images.length ? <img className="imgpic" src={variantImage.src} alt={`${this.props.product.title} product shot`}/> : null}
+        <div className="productsum">
         <h5 className="Product__title">{this.props.product.title}</h5>
         <span className="Product__price">${variant.price}</span>
         {variantSelectors}<br />
@@ -85,6 +86,7 @@ class Product extends Component {
           <input min="1" type="number" defaultValue={variantQuantity} onChange={this.handleQuantityChange}></input>
         </label><br />
         <button className="Product__buy button" onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}>Add to Cart</button>
+      </div>
       </div>
     );
   }

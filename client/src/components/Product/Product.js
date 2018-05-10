@@ -80,7 +80,7 @@ class Product extends Component {
         <div className="productsum">
         <center>
         <h5 className="Product__title">{this.props.product.title}</h5>
-        <span className="Product__price">${variant.price}</span>
+        <span className="Product__price">${variant.price} </span>
         {variantSelectors}<br />
         <label className="Product__option">
           Quantity

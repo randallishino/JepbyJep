@@ -141,13 +141,6 @@ handleCartClose() {
           client={this.props.client}
           addVariantToCart={this.addVariantToCart}
         />
-        <Cart
-          checkout={this.state.checkout}
-          isCartOpen={this.state.isCartOpen}
-          handleCartClose={this.handleCartClose}
-          updateQuantityInCart={this.updateQuantityInCart}
-          removeLineItemInCart={this.removeLineItemInCart}
-        />
           </Col>
         </Row>
         <Footer>

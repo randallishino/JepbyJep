@@ -38,7 +38,7 @@ class Shop extends Component {
       storefrontAccessToken: '0c729c3d521e6d7523cd2f6f9cd4707f',
       domain: 'JepbyJep.myshopify.com'
     });
-  
+
     console.log(this.state);
     this.setState({
       shopifyClient
@@ -119,6 +119,13 @@ handleCartClose() {
             <img class="logo" src={logojepbyjep}></img>
           </NavLink>
           </Col>
+          <Col className="cart" xs="9">
+          {!this.state.isCartOpen &&
+          <div className="shopcart">
+            <i className="fas fa-shopping-cart" onClick={this.openCheckout}></i>
+          </div>
+          }
+          </Col>
         </Row>
         <Row>
           <Col className="navi" xs="3">
@@ -127,17 +134,8 @@ handleCartClose() {
             <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink><br />
             <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
           </Col>
-          </Row>
-        <Row>
-          <Col className="navi" xs="3">
-          </Col>
             <Col className="containerpages" xs="9">
-            
-            {!this.state.isCartOpen &&
-            <div className="App__view-cart-wrapper">
-              <button className="App__view-cart" onClick={()=> this.setState({isCartOpen: true})}>Cart</button>
-            </div>
-            }
+
             <Products
           products={this.state.products}
           client={this.props.client}

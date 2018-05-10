@@ -23,6 +23,7 @@
 }
 .shopcart {
     float: right;
+    padding-top: 3%;
 }
 
 @media screen and (max-width: 400px) {

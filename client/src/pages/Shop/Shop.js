@@ -134,8 +134,7 @@ handleCartClose() {
             <NavLink className="linkfont" to='/collaboration'>Collaboration</NavLink><br />
             <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
           </Col>
-            <Col className="containerpages" xs="9">
-
+          <Col className="containerpages" xs="9">
             <Products
           products={this.state.products}
           client={this.props.client}

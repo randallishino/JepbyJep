@@ -17,10 +17,10 @@ router.post('/register', function(req, res) {
       });
       // save the user
       newUser.save(function(err) {
-        if (err) {
-          return res.json({success: false, msg: 'Username already exists.'});
-        }
-        res.json({success: true, msg: 'Successful created new user.'});
+        // if (err) {
+        //   return res.json({success: false, msg: 'Username already exists.'});
+        // }
+        // res.json({success: true, msg: 'Successful created new user.'});
       });
       res.redirect('/home');
     }
@@ -38,6 +38,7 @@ router.post('/register', function(req, res) {
       } else {
         // check if password matches
         user.comparePassword(req.body.password, function (err, isMatch) {
+
           if (isMatch && !err) {
             // if user is found and password is right create a token
             var token = jwt.sign(user.toJSON(), settings.secret);
@@ -47,6 +48,7 @@ router.post('/register', function(req, res) {
             res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
           }
         });
+        ;
       }
     });
   });

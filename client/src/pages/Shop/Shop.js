@@ -8,8 +8,8 @@ import { Container, Row, Col } from "reactstrap";
 import Client from 'shopify-buy';
 import logojepbyjep from "../../images/logojepbyjep.png";
 import Products from "../../components/Products";
-
-
+import Cart from "../../components/Cart";
+import CartModal from "../../components/CartModal";
 
 class Shop extends Component {
   constructor() {
@@ -111,7 +111,7 @@ handleCartClose() {
         <Row>
           <Col className="logo" xs="1">
             <NavLink to='/home'>
-            <img class="logo" alt="logopic" src={logojepbyjep}></img>
+            <img className="logo" alt="logopic" src={logojepbyjep}></img>
           </NavLink>
           </Col>
           <Col className="cart" xs="9">
@@ -135,6 +135,21 @@ handleCartClose() {
           client={this.props.client}
           addVariantToCart={this.addVariantToCart}
         />
+        
+        <CartModal
+      checkout={this.state.checkout}
+      isCartOpen={this.state.isCartOpen}
+      handleCartClose={this.handleCartClose}
+      updateQuantityInCart={this.updateQuantityInCart}
+      removeLineItemInCart={this.removeLineItemInCart}
+      />
+          {/* <Cart
+          checkout={this.state.checkout}
+          isCartOpen={this.state.isCartOpen}
+          handleCartClose={this.handleCartClose}
+          updateQuantityInCart={this.updateQuantityInCart}
+          removeLineItemInCart={this.removeLineItemInCart}
+        /> */}
           </Col>
         </Row>
         <Footer>

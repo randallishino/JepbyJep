@@ -10,10 +10,11 @@
 .collab-ipsum {
   font-family: 'Cabin', cursive;
   font-size: 16px;
+  padding-bottom: 15%;
 }
 
 .collab-partner {
-    padding-top: 5%;
+    padding-top: 2%;
     font-size: 24px;
     font-weight: bold;
     font-family: 'Cabin', cursive;

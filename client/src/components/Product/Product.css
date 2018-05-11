@@ -5,10 +5,19 @@
     padding-top: 10%;
 }
 
-.productsum {
-    padding-left: 10%;
+.inputfield {
+  width: 45px;
+  height: 20px;
 }
 
 .Product {
   padding-bottom: 5%;
+}
+
+.Product__option {
+  height: 20px;
+}
+
+.inputfield {
+  padding-left: 15%;
 }

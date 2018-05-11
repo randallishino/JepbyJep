@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Wrapper from "../../components/Wrapper";
-import Login from "../../components/Login/Login";
 import { NavLink } from "react-router-dom";
 import Footer from "../../components/Footer";
 import video from "../../compressed.mp4";
@@ -22,7 +20,7 @@ class Videos extends Component {
               <Row>
                 <Col className="logo" xs="1">
                   <NavLink to='/home'>
-                    <img class="logo" src={logojepbyjep}></img>
+                    <img class="logo" alt="imglogo" src={logojepbyjep}></img>
                   </NavLink>
                 </Col>
               </Row>

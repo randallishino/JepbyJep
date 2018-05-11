@@ -25,8 +25,8 @@
 
 @media screen and (max-width: 400px) {
   #homeVideo {
-    width: 200px;
-    height: 250px;
+    width: 100px;
+    height: 150px;
   }
 
   .navi {
@@ -36,8 +36,8 @@
 
 @media screen and (max-width: 500px) {
   #homeVideo {
-    width: 250px;
-    height: 300px;
+    width: 150px;
+    height: 200px;
   }
   .navi {
     padding-top: 15%;
@@ -46,8 +46,18 @@
 
 @media screen and (max-width: 600px) {
   #homeVideo {
-    width: 400px;
-    height: 450px;
+    width: 200px;
+    height: 250px;
+  }
+  .navi {
+    padding-top: 15%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  #homeVideo {
+    width: 150px;
+    height: 20px;
   }
   .navi {
     padding-top: 15%;
@@ -56,7 +66,36 @@
 
 @media screen and (max-width: 700px) {
   #homeVideo {
-    width: 500px;
-    height: 550px;
+    width: 250px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #homeVideo {
+    width: 300px;
+    height: 350px;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  #homeVideo {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #homeVideo {
+    width: 150px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #homeVideo {
+    width: 300px;
+    height: 350px;
   }
 }

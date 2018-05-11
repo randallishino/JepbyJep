@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./Home.css";
 import video from "../../compressed.mp4";
-import Wrapper from "../../components/Wrapper";
-import Login from "../../components/Login/Login";
 import Footer from "../../components/Footer/Footer";
 import { NavLink } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
@@ -28,7 +26,7 @@ render() {
       <Row>
         <Col className="logo" xs="1">
           <NavLink to='/home'>
-            <img class="logo" src={logojepbyjep}></img>
+            <img class="logo" alt="piclogo" src={logojepbyjep}></img>
           </NavLink>
         </Col>
       </Row>

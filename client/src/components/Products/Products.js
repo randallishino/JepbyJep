@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Product from '../Product';
-import { Container, Row, Col, CarouselItem } from "reactstrap";
+import { Row } from "reactstrap";
 
 class Products extends Component {
   render() {

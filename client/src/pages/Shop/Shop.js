@@ -1,19 +1,14 @@
 import React, { Component } from "react";
-import Wrapper from "../../components/Wrapper";
-import Login from "../../components/Login/Login";
 import { NavLink } from "react-router-dom";
 import Footer from "../../components/Footer";
-import video from "../../compressed.mp4";
-import ReactPlayer from 'react-player';
 import "./Shop.css";
 // import API from "../../utils/api";
-import { Container, Row, Col, CarouselItem } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 // import Cards from "../../components/Cards";
-import Client, { Shopify } from 'shopify-buy';
-import axios from "axios";
+import Client from 'shopify-buy';
 import logojepbyjep from "../../images/logojepbyjep.png";
 import Products from "../../components/Products";
-import Cart from "../../components/Cart";
+
 
 
 class Shop extends Component {
@@ -116,7 +111,7 @@ handleCartClose() {
         <Row>
           <Col className="logo" xs="1">
             <NavLink to='/home'>
-            <img class="logo" src={logojepbyjep}></img>
+            <img class="logo" alt="logopic" src={logojepbyjep}></img>
           </NavLink>
           </Col>
           <Col className="cart" xs="9">

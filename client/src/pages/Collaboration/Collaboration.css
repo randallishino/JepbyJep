@@ -55,7 +55,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  #homeVideo {
+  .collab {
     width: 250px;
     height: 300px;
   }
@@ -65,7 +65,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  #homeVideo {
+  .collab {
     width: 400px;
     height: 450px;
   }
@@ -75,7 +75,7 @@
 }
 
 @media screen and (max-width: 700px) {
-  #homeVideo {
+  .collab {
     width: 500px;
     height: 550px;
   }

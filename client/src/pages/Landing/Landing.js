@@ -22,7 +22,7 @@ class Landing extends Component {
                     <Row>
                         <Col Classname= 'col-centered'>
                             <div className="title_jbj">
-                                <NavLink to="/home" className="grow" id="title"><img class="logo2" src={whitelogo}></img></NavLink>
+                                <NavLink to="/home" className="grow" id="title"><img class="logo2" alt="navimage" src={whitelogo}></img></NavLink>
                             </div>
                         </Col>
                     </Row>

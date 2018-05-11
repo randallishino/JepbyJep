@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Login.css';
@@ -25,7 +24,7 @@ class Login extends Component {
 
     const { username, password } = this.state;
 
-    
+
     axios.post('/api/auth/login', { username, password })
       .then((result) => {
         localStorage.setItem('jwtToken', result.data.token);
@@ -39,7 +38,7 @@ class Login extends Component {
       });
   }
 
-  
+
 
   render() {
     const { username, password, message } = this.state;

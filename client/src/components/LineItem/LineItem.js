@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import "./LineItem.css";
+import { Row, Col } from "reactstrap";
 
 class LineItem extends Component {
   constructor(props) {
@@ -20,9 +22,11 @@ class LineItem extends Component {
 
   render() {
     return (
-      <li className="Line-item">
+      <div className="Line-item">
+      <Row>
+      <Col xs="12">
         <div className="Line-item__img">
-          {this.props.line_item.variant.image ? <img src={this.props.line_item.variant.image.src} alt={`${this.props.line_item.title} product shot`}/> : null}
+          {this.props.line_item.variant.image ? <img className="modalimg" src={this.props.line_item.variant.image.src} alt={`${this.props.line_item.title} product shot`}/> : null}
         </div>
 
         <div className="Line-item__content">
@@ -45,10 +49,14 @@ class LineItem extends Component {
             <span className="Line-item__price">
               $ { (this.props.line_item.quantity * this.props.line_item.variant.price).toFixed(2) }
             </span>
+            <div className="buttonremove">
             <button className="Line-item__remove" onClick={()=> this.props.removeLineItemInCart(this.props.line_item.id)}>Remove from Cart</button>
+            </div>
           </div>
         </div>
-      </li>
+        </Col>
+        </Row>
+      </div>
     );
   }
 }

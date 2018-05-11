@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import LineItem from '../LineItem';
-import { Row } from "reactstrap";
 import "./CartModal.css";
 
 class CartModal extends React.Component {
@@ -10,11 +9,11 @@ class CartModal extends React.Component {
       this.state = {
         modal: false
       };
-  
+
       this.toggle = this.toggle.bind(this);
       this.openCheckout = this.openCheckout.bind(this);
     }
-  
+
     openCheckout() {
       window.open(this.props.checkout.webUrl);
     }
@@ -24,7 +23,7 @@ class CartModal extends React.Component {
           modal: !this.state.modal
         });
       }
-    
+
       render() {
         let line_items = this.props.checkout.lineItems.map((line_item) => {
           return (
@@ -36,14 +35,14 @@ class CartModal extends React.Component {
             />
           );
         });
-    
+
       return (
         <div>
-            <Button className="cart-button" color="danger" onClick={this.toggle}>Your Cart</Button>
+            <Button className="cart-button" outline color="secondary" onClick={this.toggle}>Your Cart</Button>
           <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
             <ModalHeader toggle={this.toggle}>Your Cart</ModalHeader>
             <ModalBody>
-            {line_items}      
+            {line_items}
             <div className="Cart-info clearfix">
             <div className="Cart-info__total Cart-info__small">Subtotal</div>
             <div className="Cart-info__pricing">
@@ -73,13 +72,12 @@ class CartModal extends React.Component {
             onClick={this.toggle}
             className="Cart__close">
             Go Back
-          </Button>            
+          </Button>
           </ModalFooter>
           </Modal>
         </div>
       );
     }
   }
-  
+
   export default CartModal;
-  

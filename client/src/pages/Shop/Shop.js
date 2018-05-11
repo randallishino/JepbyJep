@@ -85,16 +85,25 @@ updateQuantityInCart(lineItemId, quantity) {
     this.setState({
       checkout: res,
     });
+    console.log(lineItemsToUpdate);
   });
 }
 
 removeLineItemInCart(lineItemId) {
   const checkoutId = this.state.checkout.id
 
+
+
   return this.state.shopifyClient.checkout.removeLineItems(checkoutId, [lineItemId]).then(res => {
     this.setState({
       checkout: res,
     });
+
+    const cartUpdate = JSON.stringify(this.state.checkout);
+    sessionStorage.setItem(this.state.checkout,cartUpdate);
+    console.log(this.state.checkout);
+    const cartVal = sessionStorage.getItem(this.state.checkout);
+    var cartObj = JSON.parse(cartVal);
   });
 }
 

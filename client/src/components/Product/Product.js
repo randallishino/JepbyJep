@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import VariantSelector from '../VariantSelector';
 import Client from "shopify-buy";
 import "./Product.css";
-
+import {Button} from 'reactstrap';
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -25,11 +25,11 @@ class Product extends Component {
         domain: 'JepbyJep.myshopify.com'
       });
 
-      console.log(this.state);
+      // console.log(this.state);
       this.setState({
         shopifyClient
       });
-      console.log(this.state);
+      // console.log(this.state);
     }
 
   findImage(images, variantId) {
@@ -86,7 +86,7 @@ class Product extends Component {
           Quantity
           <input className="inputfield" min="1" type="number" defaultValue={variantQuantity} onChange={this.handleQuantityChange}></input>
         </label><br />
-        <button className="Product__buy button" onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}>Add to Cart</button>
+        <Button className="Product__buy button" outline color="secondary" onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}>Add to Cart</Button>
         </center>
       </div>
       </div>

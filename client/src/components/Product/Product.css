@@ -4,6 +4,9 @@
     padding: 2%;
     padding-top: 10%;
 }
+.Product__buy button {
+  background: #fff;
+}
 
 .inputfield {
   width: 45px;

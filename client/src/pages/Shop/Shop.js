@@ -8,7 +8,6 @@ import { Container, Row, Col } from "reactstrap";
 import Client from 'shopify-buy';
 import logojepbyjep from "../../images/logojepbyjep.png";
 import Products from "../../components/Products";
-import Cart from "../../components/Cart";
 import CartModal from "../../components/CartModal";
 
 class Shop extends Component {
@@ -115,11 +114,15 @@ handleCartClose() {
           </NavLink>
           </Col>
           <Col className="cart" xs="9">
-          {!this.state.isCartOpen &&
           <div className="shopcart">
-            <i className="fas fa-shopping-cart" onClick={this.openCheckout}></i>
+          <CartModal
+            checkout={this.state.checkout}
+            isCartOpen={this.state.isCartOpen}
+            handleCartClose={this.handleCartClose}
+            updateQuantityInCart={this.updateQuantityInCart}
+            removeLineItemInCart={this.removeLineItemInCart}
+          />
           </div>
-          }
           </Col>
         </Row>
         <Row>
@@ -130,26 +133,11 @@ handleCartClose() {
             <NavLink className="linkfont" to='/login'>Login/Register</NavLink>
           </Col>
           <Col className="containerpages" xs="9">
-            <Products
-          products={this.state.products}
-          client={this.props.client}
-          addVariantToCart={this.addVariantToCart}
-        />
-        
-        <CartModal
-      checkout={this.state.checkout}
-      isCartOpen={this.state.isCartOpen}
-      handleCartClose={this.handleCartClose}
-      updateQuantityInCart={this.updateQuantityInCart}
-      removeLineItemInCart={this.removeLineItemInCart}
-      />
-          {/* <Cart
-          checkout={this.state.checkout}
-          isCartOpen={this.state.isCartOpen}
-          handleCartClose={this.handleCartClose}
-          updateQuantityInCart={this.updateQuantityInCart}
-          removeLineItemInCart={this.removeLineItemInCart}
-        /> */}
+          <Products
+            products={this.state.products}
+            client={this.props.client}
+            addVariantToCart={this.addVariantToCart}
+          />
           </Col>
         </Row>
         <Footer>

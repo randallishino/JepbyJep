@@ -86,7 +86,7 @@ class Product extends Component {
           Quantity
           <input className="inputfield" min="1" type="number" defaultValue={variantQuantity} onChange={this.handleQuantityChange}></input>
         </label><br />
-        <Button className="Product__buy button" outline color="secondary" onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}>Add to Cart</Button>
+        <Button className="cart-button" outline color="secondary" onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}>Add to Cart</Button>
         </center>
       </div>
       </div>

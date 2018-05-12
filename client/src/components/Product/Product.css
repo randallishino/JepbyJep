@@ -19,8 +19,24 @@
 
 .Product__option {
   height: 20px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .inputfield {
   padding-left: 15%;
+}
+
+.Product__title {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 25px;
+}
+
+.Product__price {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 25px;
+}
+
+.imgpic:hover {
+  -webkit-transform: scale(1.5,1.8);
+
 }

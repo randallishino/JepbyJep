@@ -1,7 +1,12 @@
 .modalcart{
-  padding-left: 30%;
+  padding-left: 35%;
 }
 
 .cart-button {
   color: black;
 }
+
+/* .modalsum {
+  border-style: solid;
+  border-width: 1px;
+} */

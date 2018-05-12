@@ -38,6 +38,10 @@
   padding-top: 10%;
 }
 
+.containerpages {
+  padding-bottom: 10%;
+}
+
 @media screen and (max-width: 400px) {
   .vimeos {
     width: 200px;

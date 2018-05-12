@@ -47,7 +47,7 @@ class CartModal extends React.Component {
             <ModalBody>
             {line_items}
             {line_items != 0 ? (
-            <div>
+            <div className="modalsum">
             <div className="Cart-info clearfix">
             <div className="Cart-info__total Cart-info__small">Subtotal</div>
             <div className="Cart-info__pricing">

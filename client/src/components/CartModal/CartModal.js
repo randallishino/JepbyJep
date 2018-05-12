@@ -41,7 +41,7 @@ class CartModal extends React.Component {
 
       return (
         <div>
-            <Button className="cart-button" outline color="secondary" onClick={this.toggle}>Your Cart</Button>
+          <i onClick={this.toggle} className="fas fa-shopping-cart cart-button">Your Cart</i>
           <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
             <ModalHeader toggle={this.toggle}>Your Cart</ModalHeader>
             <ModalBody>

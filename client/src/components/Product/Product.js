@@ -26,11 +26,9 @@ class Product extends Component {
         domain: 'JepbyJep.myshopify.com'
       });
 
-      // console.log(this.state);
       this.setState({
         shopifyClient
       });
-      // console.log(this.state);
     }
 
   findImage(images, variantId) {

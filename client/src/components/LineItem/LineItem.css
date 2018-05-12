@@ -10,3 +10,15 @@
 .Line-item {
   padding-left: 30%;
 }
+
+#plus {
+  padding-left: 3%;
+}
+
+#minus {
+  padding-right: 3%;
+}
+
+#remove {
+  margin-top: 3%;
+}

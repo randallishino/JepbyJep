@@ -2,6 +2,9 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import LineItem from '../LineItem';
 import "./CartModal.css";
+import SimpleStorage from "react-simple-storage";
+
+
 
 class CartModal extends React.Component {
     constructor(props) {
@@ -43,6 +46,8 @@ class CartModal extends React.Component {
             <ModalHeader toggle={this.toggle}>Your Cart</ModalHeader>
             <ModalBody>
             {line_items}
+            {line_items != 0 ? (
+            <div>
             <div className="Cart-info clearfix">
             <div className="Cart-info__total Cart-info__small">Subtotal</div>
             <div className="Cart-info__pricing">
@@ -63,6 +68,8 @@ class CartModal extends React.Component {
               <span className="pricing">$ {this.props.checkout.totalPrice}</span>
             </div>
           </div>
+          </div>
+            ) : <p> Your cart is empty</p>}
               </ModalBody>
             <ModalFooter>
             <Button className="Cart__checkout button" color="primary" onClick={this.openCheckout}>Checkout</Button>

@@ -3,6 +3,7 @@ import VariantSelector from '../VariantSelector';
 import Client from "shopify-buy";
 import "./Product.css";
 import {Button} from 'reactstrap';
+
 class Product extends Component {
   constructor(props) {
     super(props);

@@ -33,11 +33,9 @@ class Shop extends Component {
       domain: 'JepbyJep.myshopify.com'
     });
 
-    console.log(this.state);
     this.setState({
       shopifyClient
     });
-    console.log(this.state);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -74,6 +72,10 @@ addVariantToCart(variantId, quantity){
     this.setState({
       checkout: res,
     });
+    const updatedItem = localStorage.setItem("lineItemsToAdd",JSON.stringify(lineItemsToAdd));
+    localStorage.getItem(updatedItem);
+    
+
   });
 }
 
@@ -85,8 +87,7 @@ updateQuantityInCart(lineItemId, quantity) {
     this.setState({
       checkout: res,
     });
-    console.log(lineItemsToUpdate);
-  });
+  })
 }
 
 removeLineItemInCart(lineItemId) {
@@ -98,12 +99,6 @@ removeLineItemInCart(lineItemId) {
     this.setState({
       checkout: res,
     });
-
-    const cartUpdate = JSON.stringify(this.state.checkout);
-    sessionStorage.setItem(this.state.checkout,cartUpdate);
-    console.log(this.state.checkout);
-    const cartVal = sessionStorage.getItem(this.state.checkout);
-    var cartObj = JSON.parse(cartVal);
   });
 }
 

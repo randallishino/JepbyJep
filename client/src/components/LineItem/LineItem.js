@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import "./LineItem.css";
 import { Row, Col } from "reactstrap";
+import { Button} from 'reactstrap';
 
 class LineItem extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class LineItem extends Component {
         <div className="Line-item__content">
           <div className="Line-item__content-row">
             <div className="Line-item__variant-title">
-              {this.props.line_item.variant.title}
+              Size {this.props.line_item.variant.title}
             </div>
             <span className="Line-item__title">
               {this.props.line_item.title}
@@ -41,16 +42,13 @@ class LineItem extends Component {
 
           <div className="Line-item__content-row">
             <div className="Line-item__quantity-container">
-              <i class="fas fa-minus"onClick={() => this.decrementQuantity(this.props.line_item.id)}></i>
+              <i className="fas fa-minus" id="minus" onClick={() => this.decrementQuantity(this.props.line_item.id)}></i>
               <span className="Line-item__quantity">{this.props.line_item.quantity}</span>
-              <i className="fas fa-plus"  onClick={() => this.incrementQuantity(this.props.line_item.id)}></i>
+              <i className="fas fa-plus" id="plus" onClick={() => this.incrementQuantity(this.props.line_item.id)}></i>
             </div>
 
-            <span className="Line-item__price">
-              $ { (this.props.line_item.quantity * this.props.line_item.variant.price).toFixed(2) }
-            </span>
             <div className="buttonremove">
-            <button className="Line-item__remove" onClick={()=> this.props.removeLineItemInCart(this.props.line_item.id)}>Remove from Cart</button>
+            <Button className="Line-item__remove"  id="remove" color="danger" onClick={()=> this.props.removeLineItemInCart(this.props.line_item.id)}>Remove from Cart</Button>
             </div>
           </div>
         </div>

@@ -9,6 +9,13 @@ import Shop from "./pages/Shop";
 import Login from "./components/Login";
 import Register from "./components/Register";
 
+
+/*
+  state = {
+    cart: {},
+    
+  }
+*/
 const App = () =>
   <Router>
       <Switch>
